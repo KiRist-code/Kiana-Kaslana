@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -15,4 +16,5 @@ async def on_message(message):
     if message.content.startswith('k.hello'):
         await message.channel.send('내가 왔노라.')
 
-client.run('NjY0Njg0MTEzOTY1MzUwOTIz.XhbGOQ.0mP45a1RXwL9lTsUUV1S5PLFr4M')
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
