@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -35,5 +36,5 @@ async def on_message(message):
         embed.add_field(name="이 이후의 명령어는 추후에 개발됩니다.",value="last update 2020/1/9", inline=False)
         embed.set_thumbnail(url=client.user.avatar_url)
         await message.channel.send(embed=embed)
-
-client.run('NjY0Njg0MTEzOTY1MzUwOTIz.XhbhRA.ubyVh0pgSZop0NdrC_saNC0Wjow')
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
