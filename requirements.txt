@@ -1,1 +1,1 @@
-discord.py==1.3.oa
+discord.py==1.2.5
